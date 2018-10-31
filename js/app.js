@@ -110,10 +110,10 @@ class Hero {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-const bug1 = new Enemy(-101 * 2.2, 0, 320);
-const bug2 = new Enemy(-101, 83, 240);
+const bug1 = new Enemy(-101 * 2.2, 0, 200);
+const bug2 = new Enemy(-101, 83, 150);
 const bug3 = new Enemy((-101 * 4), 83, 300);
-const bug4 = new Enemy((-101 * 3), 166, 275);
+const bug4 = new Enemy((-101 * 3), 166, 400);
 
 // Groups all the enemies into one array
 const allEnemies = [];

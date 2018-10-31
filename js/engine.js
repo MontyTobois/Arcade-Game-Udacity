@@ -67,15 +67,15 @@ var Engine = (function(global) {
     /* Use the browser's requestAnimationFrame function to call this
      * function again as soon as the browser is able to draw another frame.
      */
-     /*Checks to see if player reached water, will then show modal
-     and pause game*/
-     if (player.victory === true) {
-         win.cancelAnimationFrame(id);
-         modal.style.display = 'block'
-       } else {
-         id = win.requestAnimationFrame(main);
-       }
-     }
+    /*Checks to see if player reached water, will then show modal
+    and pause game*/
+    if (player.victory === true) {
+      win.cancelAnimationFrame(id);
+      modal.style.display = 'block'
+    } else {
+      id = win.requestAnimationFrame(main);
+    }
+  }
   /* This function does some initial setup that should only occur once,
    * particularly setting the lastTime variable that is required for the
    * game loop.
