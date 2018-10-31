@@ -81,7 +81,7 @@ var Engine = (function(global) {
    * game loop.
    */
   function init() {
-    reset();
+    player.reset();
     lastTime = Date.now();
     main();
   }
