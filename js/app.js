@@ -1,3 +1,10 @@
+// Global variables
+
+let lives = 05,
+  score = 00,
+  livesLeft = document.querySelector('.lives'),
+  scoreholder = document.querySelector('.score');
+
 // Enemies our player must avoid
 const Enemy = function(x, y, speed) {
   this.x = x;
@@ -6,6 +13,7 @@ const Enemy = function(x, y, speed) {
   this.sprite = 'images/enemy-bug.png';
   this.step = 101;
   this.boundary = this.step * 5;
+  //once they run off screen they can start from zero and dash across again
   this.resetPos = 0;
 };
 
@@ -26,7 +34,6 @@ Enemy.prototype.update = function(dt) {
     // reset to orginal position
     this.x = this.resetPos;
   }
-
 };
 
 
@@ -49,8 +56,9 @@ class Hero {
     this.x = this.startX;
     this.y = this.startY;
     this.victory = false;
+    this.hurt = false;
   }
-  // Draw the Hero on the screen, required method for game
+  // Draw the player on the screen, required method for game
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
@@ -86,15 +94,31 @@ class Hero {
     //Check for collision here
     for (let enemy of allEnemies) {
 
-      //Did the player and enemy crash
+      //Did the player and enemy crash if so reset player
       if (this.y === enemy.y && (enemy.x + enemy.step / 2 > this.x && enemy.x < this.x + this.step / 2)) {
         this.reset();
+        // will decremnt the lives by 1 when the player and enemy crash
+        lives--;
+        livesLeft.innerHTML = 'Lives  :  ' + lives;
+      }
+      ///a conditional to check is live have reach zero if so we stop game and show modal
+      if (lives === 0) {
+        this.hurt = true;
       }
     }
+
     //Check for win.
     // did player reach the water?
     if (this.y < 55) {
-      this.victory = true;
+      this.reset();
+      // will Increment the score by 1 when the player reaches the water
+      score++;
+      scoreholder.innerHTML = 'Score  :  ' + score;
+
+      ///a conditional to check is score reached 5 if so we stop game and show modal
+      if (score === 5) {
+        this.victory = true;
+      }
     }
   }
 

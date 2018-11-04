@@ -30,10 +30,16 @@ var Engine = (function(global) {
   const replay = document.querySelector('.modal-button');
 
   replay.addEventListener('click', function() {
+    // will hide modal, reset player, game has motion again
     modal.style.display = 'none';
     player.reset();
+    window.location.reload(true);
     player.victory = false;
-    win.requestAnimationFrame(main)
+    player.hit = false;
+    livesLeft.innerHTML = 'Lives  : 05';
+    livesLeft = 05;
+    scoreholder.innerHTML = 'Score  : 00';
+    score = 00;
   });
 
   canvas.width = 505;
@@ -69,7 +75,7 @@ var Engine = (function(global) {
      */
     /*Checks to see if player reached water, will then show modal
     and pause game*/
-    if (player.victory === true) {
+    if (player.victory === true || player.hurt === true) {
       win.cancelAnimationFrame(id);
       modal.style.display = 'block'
     } else {
