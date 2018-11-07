@@ -1,6 +1,34 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Instructions](#Instructions)
+* [Language](#Language)
+* [Credits](#Credits)
+* [Future Updates](#Future Updates)
+
+## Instructions
+
+# How The Game Works
+User needs to get player from the grass land to the water. No clock so take your time to dodge those tricky enemies.
+
+Rules to the game
+
+* After being hit 5 times game is over and the user may play again.
+
+* After scoring 5 times game is over and the user may play again.
+
+## Language
+
+This game is built with **HTML, CSS, JAVASCRIPT.**
+
+## Credits
+
+* The walkthrough with Matthew Cranford during FEND Study Jam was helpful on understanding the collision. I was able to build the foundation and move from there.
+
+* W3School for looping game after replay and modal disappear...https://www.w3schools.com/jsref/met_loc_reload.asp
+
+## Future Updates
+Timer
+Character select
+Restart button on side of score panel

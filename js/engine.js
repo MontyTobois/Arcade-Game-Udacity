@@ -29,15 +29,26 @@ var Engine = (function(global) {
   const modal = document.querySelector('.modal');
   const replay = document.querySelector('.modal-button');
 
+// resets the game terms
   replay.addEventListener('click', function() {
-    // will hide modal, reset player, game has motion again
+    // will hide modal and reset player
     modal.style.display = 'none';
     player.reset();
+
+    // game has motion again
     window.location.reload(true);
+
+    // victory not declared
     player.victory = false;
-    player.hit = false;
+
+    // player has all lives
+    player.hurt = false;
+
+    // sets lives back to 5
     livesLeft.innerHTML = 'Lives  : 05';
     livesLeft = 05;
+
+    // sets score to 0
     scoreholder.innerHTML = 'Score  : 00';
     score = 00;
   });
@@ -73,11 +84,14 @@ var Engine = (function(global) {
     /* Use the browser's requestAnimationFrame function to call this
      * function again as soon as the browser is able to draw another frame.
      */
-    /*Checks to see if player reached water, will then show modal
-    and pause game*/
+
+    /* Checks to see if player reached water or gets hurt 5 times
+     will then show modal and pause game*/
     if (player.victory === true || player.hurt === true) {
       win.cancelAnimationFrame(id);
       modal.style.display = 'block'
+
+      // If not keep game in motion
     } else {
       id = win.requestAnimationFrame(main);
     }

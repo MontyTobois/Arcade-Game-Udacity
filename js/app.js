@@ -20,6 +20,7 @@ const Enemy = function(x, y, speed) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
+
   // You should multiply any movement by the dt parameter
   // which will ensure the game runs at the same speed for
   // all computers.
@@ -97,11 +98,12 @@ class Hero {
       //Did the player and enemy crash if so reset player
       if (this.y === enemy.y && (enemy.x + enemy.step / 2 > this.x && enemy.x < this.x + this.step / 2)) {
         this.reset();
-        // will decremnt the lives by 1 when the player and enemy crash
+
+        // will decrease the lives by 1 when the player and enemy crash
         lives--;
         livesLeft.innerHTML = 'Lives  :  ' + lives;
       }
-      ///a conditional to check is live have reach zero if so we stop game and show modal
+      // a conditional to check is live have reach zero if so we stop game and show modal
       if (lives === 0) {
         this.hurt = true;
       }
@@ -111,11 +113,12 @@ class Hero {
     // did player reach the water?
     if (this.y < 55) {
       this.reset();
+
       // will Increment the score by 1 when the player reaches the water
       score++;
       scoreholder.innerHTML = 'Score  :  ' + score;
 
-      ///a conditional to check is score reached 5 if so we stop game and show modal
+      /// a conditional to check is score reached 5 if so we stop game and show modal
       if (score === 5) {
         this.victory = true;
       }
@@ -124,6 +127,7 @@ class Hero {
 
   //Reset Player
   reset() {
+
     //set x and y for start
     this.x = this.startX;
     this.y = this.startY;
