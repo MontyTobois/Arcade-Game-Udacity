@@ -5,7 +5,7 @@
 * [Instructions](#Instructions)
 * [Language](#Language)
 * [Credits](#Credits)
-* [Future Updates](#Future Updates)
+* [Future](#Future)
 
 ## Instructions
 
@@ -28,7 +28,5 @@ This game is built with **HTML, CSS, JAVASCRIPT.**
 
 * W3School for looping game after replay and modal disappear...https://www.w3schools.com/jsref/met_loc_reload.asp
 
-## Future Updates
-*Timer
-*Character select
-*Restart button on side of score panel
+## Future
+Timer, Character select, Restart button on side of score panel
