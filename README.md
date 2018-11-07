@@ -9,6 +9,10 @@
 
 ## Instructions
 
+* Clone this repo to you terminal or download the zip
+
+* Open `index.html` on your preferred browser
+
 # How The Game Works
 User needs to get player from the grass land to the water. No clock so take your time to dodge those tricky enemies.
 
