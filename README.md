@@ -33,4 +33,4 @@ This game is built with **HTML, CSS, JAVASCRIPT.**
 * W3School for [looping game](https://www.w3schools.com/jsref/met_loc_reload.asp) after replay and modal disappear
 
 ## Future
-Timer, Character select, Restart button on side of score panel
+Timer, Character select, Restart button on side of score panel.
