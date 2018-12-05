@@ -5,7 +5,9 @@
 * [Instructions](#Instructions)
 * [Language](#Language)
 * [Credits](#Credits)
-* [Updates](#Future Updates)
+* [Future](#Future)
+
+[DEMO](https://bug-boy-runner.herokuapp.com/)
 
 ## Instructions
 
