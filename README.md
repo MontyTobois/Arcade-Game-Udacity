@@ -28,11 +28,9 @@ This game is built with **HTML, CSS, JAVASCRIPT.**
 
 ## Credits
 
-* The walkthrough with Matthew Cranford during FEND Study Jam was helpful on understanding the collision. I was able to build the foundation and move from there.
+* The walkthrough with Matthew Cranford during [FEND Study Jam](https://matthewcranford.com/category/blog-posts/walkthrough/arcade-game/) was helpful on understanding the collision. I was able to build the foundation and move from there.
 
-* W3School for looping game after replay and modal disappear...https://www.w3schools.com/jsref/met_loc_reload.asp
+* W3School for [looping game](https://www.w3schools.com/jsref/met_loc_reload.asp) after replay and modal disappear
 
-## Future Updates
-Timer
-Character select
-Restart button on side of score panel
+## Future
+Timer, Character select, Restart button on side of score panel.
